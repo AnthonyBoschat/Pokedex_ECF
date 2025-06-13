@@ -21,6 +21,10 @@ export function DetailPage(){
         }
     }, [pokemonID])
 
+    const addReview = (newReview) => {
+        setReviews(current => [...current, newReview])
+    }
+
 
 
     return(
@@ -29,7 +33,7 @@ export function DetailPage(){
                 <SwitchPokemon pokemonID={pokemonID}/>
                 {pokemon && <PokemonImage pokemon={pokemon} />}
                 {(stats && pokemon) && <PokemonStatistics pokemon={pokemon} stats={stats}/>}
-                <PokemonReviews pokemonID={pokemonID} reviews={reviews}/>
+                <PokemonReviews addReview={addReview} pokemonID={pokemonID} reviews={reviews}/>
             </div>
         </>
     )

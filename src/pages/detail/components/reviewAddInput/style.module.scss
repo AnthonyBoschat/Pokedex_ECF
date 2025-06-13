@@ -7,6 +7,18 @@
     align-items: end;
     width: 100%;
 
+    .error{
+        height: 1rem;
+        text-align: center;
+        color: red;
+        font-size: 0.9rem;
+        
+        visibility: hidden;
+        &.active{
+            visibility: visible;
+        }
+    }
+
     .textarea{
         width: 100%;
         padding: 1rem;
@@ -31,6 +43,11 @@
         background-color: rgba(0, 0, 0, 0.737);
         color: white;
         transition: all 0.15s linear;
+
+        &.disabled{
+            opacity: 0.5;
+            pointer-events: none;
+        }
 
         &:hover{
             cursor: pointer;
