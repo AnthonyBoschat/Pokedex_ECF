@@ -5,7 +5,7 @@ import { LoadData } from "@services/loadData";
 import { PokemonImage } from "@components/pokemonImage";
 import { PokemonStatistics } from "./components/pokemonStatistics";
 import { PokemonReviews } from "./components/pokemonReviews";
-import { SwitchPokemon } from "./components/switchPokemon";
+import { SwitchPokemon } from "./components/pokemonSwitch";
 
 export function DetailPage(){
 
@@ -21,12 +21,6 @@ export function DetailPage(){
         }
     }, [pokemonID])
 
-    useEffect(() => {
-        console.log({
-            pokemon,
-            reviews
-        })
-    }, [pokemon, reviews])
 
 
     return(

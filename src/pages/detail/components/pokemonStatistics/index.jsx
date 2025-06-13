@@ -11,7 +11,7 @@ export function PokemonStatistics({pokemon, stats}){
             <div className={s.type}><PokemonTypes pokemonTypes={pokemon.types}/></div>
             <ul className={s.stats}>
                 {Object.entries(stats).map((stat) => (
-                    <PokemonStat stat={stat}/>
+                    <PokemonStat key={stat[0]} stat={stat}/>
                 ))}
             </ul>
         </div>
