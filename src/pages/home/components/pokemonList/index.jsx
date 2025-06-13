@@ -8,7 +8,7 @@ export function PokemonList({pokemons}){
     return(
         <ul className={s.container}>
             {pokemons.map(pokemon => (
-                <PokemonCard pokemon={pokemon}/>
+                <PokemonCard key={pokemon.id} pokemon={pokemon}/>
             ))}
         </ul>
     )

@@ -23,7 +23,7 @@ export function HomePage(){
     
     const [pokemons, setPokemons] = useState([])
     const [filterInputValue, setFilterInputValue] = useState("")
-    const filteredPokemons = useMemo(() => pokemons.filter(pokemon => isMatchingFilterInput(pokemon.name, pokemon.types)),[filterInputValue])
+    const filteredPokemons = useMemo(() => pokemons.filter(pokemon => isMatchingFilterInput(pokemon.name, pokemon.types)),[filterInputValue, pokemons])
 
     useEffect(() => {
         LoadData.loadPokemons(setPokemons)

@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 1rem;
+
+    li{
+        padding: 0.2rem 1rem;
+        border-radius: 1rem;
+        color: white;
+    }
+}

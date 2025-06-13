@@ -1,4 +1,4 @@
-import { callBackend } from "@services/backend";
+import { Types } from "@components/type";
 import s from "./style.module.scss";
 import { ENDPOINTS } from "@constants/endpoints";
 
@@ -11,7 +11,7 @@ export function PokemonCard({pokemon}){
                 <img src={ENDPOINTS.GET_IMAGE(pokemon.id)} alt={`image of ${pokemon.name}`} />
             </div>
             <span className={s.id_name}>#{pokemon.id} {pokemon.name}</span>
-
+            <Types pokemonTypes={pokemon.types}/>
         </li>
     )
 }
