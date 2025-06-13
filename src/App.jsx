@@ -3,6 +3,7 @@ import './style.scss'
 import { ROUTES } from '@constants/routes'
 import { AppProvider } from '@contexts/app/index'
 import { AppLayout } from '@layouts/app'
+import { HomePage } from '@pages/home'
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
         <Routes>
 
           <Route path={ROUTES.ROOT} element={<AppLayout/>}>
-            <Route path={ROUTES.HOME} element={"coucou"}/>
+            <Route path={ROUTES.HOME} element={<HomePage/>}/>
           </Route>
 
         </Routes>
