@@ -1,6 +1,7 @@
 import { PokemonCard } from "../pokemonCard";
 import s from "./style.module.scss";
 
+// The list of the pokemons
 export function PokemonList({pokemons}){
 
 

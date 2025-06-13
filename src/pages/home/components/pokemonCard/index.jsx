@@ -2,6 +2,7 @@ import { callBackend } from "@services/backend";
 import s from "./style.module.scss";
 import { ENDPOINTS } from "@constants/endpoints";
 
+// A card of only one pokemon
 export function PokemonCard({pokemon}){
 
     return(
