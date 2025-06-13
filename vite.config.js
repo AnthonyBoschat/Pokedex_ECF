@@ -20,7 +20,7 @@ export default defineConfig({
       "@constants":path.resolve(__dirname, "./src/core/constants"),
       "@assets":path.resolve(__dirname, "./src/core/assets"),
       "@sass":path.resolve(__dirname, "./src/core/sass"),
-      "@services":path.resolve(__dirname, "./src/Physics/services"),
+      "@services":path.resolve(__dirname, "./src/core/services"),
 
     }
   },
