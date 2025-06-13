@@ -15,6 +15,7 @@ export function ReviewAddInput({pokemonID, addReview}){
 
     const handleSubmit = async (event) => {
         event.preventDefault()
+
         const formData      = new FormData(event.target)
         const formValues    = Object.fromEntries(formData)
         
@@ -32,11 +33,11 @@ export function ReviewAddInput({pokemonID, addReview}){
                     pokemonId: pokemonID,
                     author:"Me",
                     content:formValues.content
-                }
+                },
+                successMessage:"Review add successfully"
             })
             const newReview = {...response, pokemonId:pokemonID}
             addReview(newReview)
-            toast.success("Review add successfully")
             event.target.reset()
         }
     }

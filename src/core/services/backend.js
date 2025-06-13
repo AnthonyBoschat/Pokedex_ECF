@@ -15,7 +15,9 @@ export async function callBackend({
     try{
         const response  = await fetch(url, options)
         const data      = await response.json()
-        toast.success(successMessage)
+        if(successMessage){
+            toast.success(successMessage)
+        }
         return data
     }catch(error){
         console.error(error)
