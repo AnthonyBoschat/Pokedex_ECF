@@ -1,0 +1,13 @@
+.container{
+    // background-color: blue;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .pokeball{
+        height: 2rem;
+    }
+    .pokedex{
+        height: 2.5rem;
+    }
+}
