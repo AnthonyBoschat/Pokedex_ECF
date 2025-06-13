@@ -1,3 +1,5 @@
 export const ROUTES = Object.freeze({
-    HOME:"/"
+    ROOT:"/",
+    HOME:"/",
+    DETAIL:"/pokemon"
 })
