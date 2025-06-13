@@ -2,17 +2,17 @@
     "compilerOptions": {
       "baseUrl": "./src",
       "paths": {
-        "@Components/*": ["components/*"],
-        "@Containers/*": ["containers/*"],
-        "@Layouts/*": ["layouts/*"],
-        "@Pages/*": ["pages/*"],
-        "@Contexts/*": ["contexts/*"],
+        "@components/*": ["components/*"],
+        "@containers/*": ["containers/*"],
+        "@layouts/*": ["layouts/*"],
+        "@pages/*": ["pages/*"],
+        "@contexts/*": ["contexts/*"],
         
         
-        "@Constants/*": ["core/constants/*"],
-        "@Sass/*": ["core/sass/*"],
-        "@Services/*": ["core/services/*"],
-        "@Assets/*": ["core/assets/*"],
+        "@constants/*": ["core/constants/*"],
+        "@sass/*": ["core/sass/*"],
+        "@services/*": ["core/services/*"],
+        "@assets/*": ["core/assets/*"],
 
       }
     },
