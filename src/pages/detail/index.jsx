@@ -5,6 +5,7 @@ import { LoadData } from "@services/loadData";
 import { PokemonImage } from "@components/pokemonImage";
 import { PokemonStatistics } from "./components/pokemonStatistics";
 import { PokemonReviews } from "./components/pokemonReviews";
+import { SwitchPokemon } from "./components/switchPokemon";
 
 export function DetailPage(){
 
@@ -29,10 +30,13 @@ export function DetailPage(){
 
 
     return(
-        <div className={s.container}>
-            {pokemon && <PokemonImage pokemon={pokemon} />}
-            {(stats && pokemon) && <PokemonStatistics pokemon={pokemon} stats={stats}/>}
-            <PokemonReviews reviews={reviews}/>
-        </div>
+        <>
+            <div className={s.container}>
+                <SwitchPokemon pokemonID={pokemonID}/>
+                {pokemon && <PokemonImage pokemon={pokemon} />}
+                {(stats && pokemon) && <PokemonStatistics pokemon={pokemon} stats={stats}/>}
+                <PokemonReviews reviews={reviews}/>
+            </div>
+        </>
     )
 }
