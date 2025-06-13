@@ -4,6 +4,9 @@
     flex-direction: column;
     gap: 1rem;
     height: 55%;
+    max-height: 55%;
+    overflow: auto;
+    padding: 0.2rem;
 
     .error{
         padding: 2rem;
