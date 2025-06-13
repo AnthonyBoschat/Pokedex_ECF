@@ -1,3 +1,5 @@
+import { FilterInput } from "./components/filterInput";
+import { PokemonList } from "./components/pokemonList";
 import s from "./style.module.scss";
 
 export function HomePage(){
@@ -6,11 +8,9 @@ export function HomePage(){
     return(
         <div className={s.main_container}>
             
-            <input className={s.filter} type="text" />
-
-            <ul className={s.pokemon_list}>
-                <li>aaa</li>
-            </ul>
+            <FilterInput/>
+            <PokemonList pokemons={[]}/>
+            
         </div>
     )
 }
