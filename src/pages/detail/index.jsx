@@ -11,14 +11,12 @@ export function DetailPage(){
     const {id:pokemonID} = useParams()
     const [pokemon, setPokemon] = useState(null)
     const [reviews, setReviews] = useState([])
-    const [ready, setReady]     = useState(false)
     const stats = useMemo(() => pokemon?.base, [pokemon])
 
     useEffect(() => {
         if(pokemonID){
             LoadData.loadPokemon(setPokemon, pokemonID)
             LoadData.loadPokemonReview(setReviews, pokemonID)
-            setReady(true)
         }
     }, [pokemonID])
 
@@ -30,12 +28,11 @@ export function DetailPage(){
     }, [pokemon, reviews])
 
 
-    if(!ready) return
     return(
-        <>
-            <PokemonImage />
-            <PokemonStatistics pokemon={pokemon} stats={stats}/>
+        <div className={s.container}>
+            {pokemon && <PokemonImage pokemon={pokemon} />}
+            {(stats && pokemon) && <PokemonStatistics pokemon={pokemon} stats={stats}/>}
             <PokemonReviews reviews={reviews}/>
-        </>
+        </div>
     )
 }

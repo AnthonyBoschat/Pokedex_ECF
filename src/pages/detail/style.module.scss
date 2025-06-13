@@ -1,0 +1,11 @@
+.container{
+    // background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url('../../core//assets/pokeball_bg.svg');
+    background-repeat: no-repeat;
+    background-size: contain;      /* ou “contain” selon l’effet recherché */
+    background-position: center; /* centre le SVG dans le conteneur */
+    background-size: 30rem;
+}
