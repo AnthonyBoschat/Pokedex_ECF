@@ -2,6 +2,7 @@ import { Error } from "@components/error";
 import { ReviewItem } from "../reviewItem";
 import s from "./style.module.scss";
 
+// Display the list of review about a pokemon
 export function ReviewList({reviews}){
 
 

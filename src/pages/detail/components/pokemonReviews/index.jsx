@@ -2,6 +2,7 @@ import { ReviewAddInput } from "../reviewAddInput";
 import { ReviewList } from "../reviewList";
 import s from "./style.module.scss";
 
+// The reviews section of a pokemon
 export function PokemonReviews({reviews, pokemonID, addReview}){
 
     return(

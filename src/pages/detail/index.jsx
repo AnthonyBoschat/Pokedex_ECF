@@ -3,10 +3,11 @@ import s from "./style.module.scss";
 import { useEffect, useMemo, useState } from "react";
 import { LoadData } from "@services/loadData";
 import { PokemonImage } from "@components/pokemonImage";
-import { PokemonStatistics } from "./components/pokemonStatistics";
+import { PokemonDescription } from "./components/pokemonDescription";
 import { PokemonReviews } from "./components/pokemonReviews";
 import { SwitchPokemon } from "./components/pokemonSwitch";
 
+// The detail page of a pokemon
 export function DetailPage(){
 
     const {id:pokemonID} = useParams()
@@ -32,7 +33,7 @@ export function DetailPage(){
             <div className={s.container}>
                 <SwitchPokemon pokemonID={pokemonID}/>
                 {pokemon && <PokemonImage pokemon={pokemon} />}
-                {(stats && pokemon) && <PokemonStatistics pokemon={pokemon} stats={stats}/>}
+                {(stats && pokemon) && <PokemonDescription pokemon={pokemon} stats={stats}/>}
                 <PokemonReviews addReview={addReview} pokemonID={pokemonID} reviews={reviews}/>
             </div>
         </>

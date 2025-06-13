@@ -1,5 +1,6 @@
 import s from "./style.module.scss";
 
+// Display one review about a pokemon
 export function ReviewItem({review}){
 
 

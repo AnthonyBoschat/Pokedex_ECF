@@ -4,6 +4,7 @@ import { callBackend } from "@services/backend";
 import { ENDPOINTS } from "@constants/endpoints";
 import { toast } from "react-toastify";
 
+// The input that can add a new review to a pokemon
 export function ReviewAddInput({pokemonID, addReview}){
 
     const [errors, setErrors] = useState({})

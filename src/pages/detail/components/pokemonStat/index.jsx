@@ -2,6 +2,7 @@ import { stringNormalize } from "@services/normalize";
 import s from "./style.module.scss";
 import { MAX_STAT } from "@constants/stats";
 
+// The statistic of a pokemon
 export function PokemonStat({stat}){
 
     const statName      = stat[0]

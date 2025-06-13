@@ -3,7 +3,8 @@ import s from "./style.module.scss";
 import background from "@assets/pokeball_bg.svg"
 import { PokemonStat } from "../pokemonStat";
 
-export function PokemonStatistics({pokemon, stats}){
+// The description section of a pokemon
+export function PokemonDescription({pokemon, stats}){
 
     return(
         <div className={s.container}>

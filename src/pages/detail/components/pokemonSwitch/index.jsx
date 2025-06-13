@@ -3,6 +3,7 @@ import s from "./style.module.scss";
 import { useNavigate } from "react-router";
 import { ROUTES } from "@constants/routes";
 
+// The arrow than can switch pokemn currently visible in the detail Page
 export function SwitchPokemon({pokemonID}){
 
     const navigate = useNavigate()
