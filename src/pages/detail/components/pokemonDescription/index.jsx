@@ -1,15 +1,14 @@
 import { PokemonTypes } from "@components/pokemonTypes";
 import s from "./style.module.scss";
-import background from "@assets/pokeball_bg.svg"
 import { PokemonStat } from "../pokemonStat";
 import { PokemonLike } from "../pokemonLike";
 
 // The description section of a pokemon
-export function PokemonDescription({pokemon, stats, onLikeClick}){
+export function PokemonDescription({pokemon, stats, addLike}){
 
     return(
         <div className={s.container}>
-            <PokemonLike onLikeClick={onLikeClick} pokemonLikeCount={pokemon.like}/>
+            <PokemonLike addLike={addLike} pokemonLikeCount={pokemon.like} pokemonID={pokemon.id}/>
             <div className={s.name}>{pokemon.name}</div>
             <div className={s.type}><PokemonTypes pokemonTypes={pokemon.types}/></div>
             <ul className={s.stats}>

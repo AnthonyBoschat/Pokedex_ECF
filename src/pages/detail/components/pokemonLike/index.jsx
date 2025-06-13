@@ -1,16 +1,30 @@
 import { Heart } from "lucide-react";
 import s from "./style.module.scss";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
+import { callBackend } from "@services/backend";
+import { ENDPOINTS } from "@constants/endpoints";
 
-export function PokemonLike({pokemonLikeCount, onLikeClick}){
+export function PokemonLike({pokemonLikeCount, addLike, pokemonID}){
 
     const animationDuration = 200
     const [liked, setLiked] = useState(false)
 
     const handleClick = async() => {
-        const success = await onLikeClick(pokemonLikeCount + 1)
-        if(success){
+        const newLikeCount = pokemonLikeCount + 1
+         const response = await callBackend({
+            url:ENDPOINTS.ADD_LIKE(pokemonID),
+            method:"PATCH",
+            body:{
+                like : newLikeCount
+            },
+            errorReturn:false
+        })
+        if(response){
+            addLike(newLikeCount)
             setLiked(true)
+        }else{
+            toast.error("A problem occured, please try later")
         }
     }
 
