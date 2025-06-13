@@ -1,7 +1,7 @@
 .container{
     // background-color: blue;
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: space-evenly;
     background-image: url('../../core//assets/pokeball_bg.svg');
     background-repeat: no-repeat;
@@ -9,8 +9,13 @@
     background-position: center; /* centre le SVG dans le conteneur */
     background-size: 30rem;
     position: relative;
+    padding-top: 20vh;
 
     img{
+        position: relative;
+        top: 20%;
+        outline: 1px solid blue;
+        height: fit-content;
         width: 10%;
     }
 }

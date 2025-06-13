@@ -4,6 +4,9 @@ export function ReviewAddInput(){
 
 
     return(
-        <input type="text" placeholder="Add a review..." />
+        <form className={s.container}>
+            <textarea name='content' className={s.textarea} type="text" placeholder="Add a review..." />
+            <input className={s.submit} type="submit" />
+        </form>
     )
 }

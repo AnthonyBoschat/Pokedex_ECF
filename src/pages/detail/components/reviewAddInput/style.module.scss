@@ -1,0 +1,44 @@
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: end;
+    width: 100%;
+
+    .textarea{
+        width: 100%;
+        padding: 1rem;
+        padding-bottom: 2rem;
+        padding-left: 0.8rem;
+        border-radius: 1rem;
+        border: none;
+        outline: 1px solid rgba(0, 48, 121, 0.8);
+        box-shadow: 0px 0px 4px rgba(0, 48, 121, 0.3);
+        height: 5rem;
+        resize: none;
+        overflow: auto;
+    }
+
+    .submit{
+        margin-right: 1rem;
+        width: fit-content;
+        padding: 0.3rem 2rem;
+        font-size: 0.8rem;
+        border-radius: 0.4rem;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.737);
+        color: white;
+        transition: all 0.15s linear;
+
+        &:hover{
+            cursor: pointer;
+            color: black;
+            background-color: white;
+            outline: 1px solid rgba(0, 0, 0, 0.737);
+        }
+    }
+
+
+}

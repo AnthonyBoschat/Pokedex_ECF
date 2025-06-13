@@ -29,7 +29,7 @@ export function DetailPage(){
                 <SwitchPokemon pokemonID={pokemonID}/>
                 {pokemon && <PokemonImage pokemon={pokemon} />}
                 {(stats && pokemon) && <PokemonStatistics pokemon={pokemon} stats={stats}/>}
-                <PokemonReviews reviews={reviews}/>
+                <PokemonReviews pokemonID={pokemonID} reviews={reviews}/>
             </div>
         </>
     )
