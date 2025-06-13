@@ -35,7 +35,11 @@ export function HomePage(){
         <div className={s.main_container}>
             
             <FilterInput inputValue={filterInputValue} handleChange={value => setFilterInputValue(value)}/>
-            <PokemonList pokemons={filteredPokemons}/>
+            {!filteredPokemons.length
+                ? <span>No pokemon found with `{filterInputValue}`</span>
+                : <PokemonList pokemons={filteredPokemons}/>
+            }
+            
             
         </div>
     )
