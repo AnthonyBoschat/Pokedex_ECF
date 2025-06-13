@@ -4,7 +4,6 @@ import s from "./style.module.scss";
 
 export function PokemonReviews({reviews, pokemonID, addReview}){
 
-    console.log(reviews)
     return(
         <div className={s.container}>
             <h2>Reviews</h2>

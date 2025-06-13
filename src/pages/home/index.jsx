@@ -2,8 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import { FilterInput } from "./components/filterInput";
 import { PokemonList } from "./components/pokemonList";
 import s from "./style.module.scss";
-import { callBackend } from "@services/backend";
-import { ENDPOINTS } from "@constants/endpoints";
 import { LoadData } from "@services/loadData";
 import { stringNormalize } from "@services/normalize";
 
@@ -35,10 +33,7 @@ export function HomePage(){
         <div className={s.main_container}>
             
             <FilterInput inputValue={filterInputValue} handleChange={value => setFilterInputValue(value)}/>
-            {!filteredPokemons.length
-                ? <span>No pokemon found with `{filterInputValue}`</span>
-                : <PokemonList pokemons={filteredPokemons}/>
-            }
+            <PokemonList pokemons={filteredPokemons} filterInputValue={filterInputValue}/>
             
             
         </div>
