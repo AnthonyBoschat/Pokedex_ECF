@@ -1,3 +1,5 @@
+import { ROUTES } from "@constants/routes"
+import { useNavigate } from "react-router"
 import { toast } from "react-toastify"
 
 export async function callBackend({
@@ -7,7 +9,6 @@ export async function callBackend({
     errorReturn     = null,
     successMessage  = "",
 }){
-    const headers = {}
     const options = {method, ...(body !== null && {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

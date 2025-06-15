@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import s from "./style.module.scss";
 import { useEffect, useMemo, useState } from "react";
 import { LoadData } from "@services/loadData";
@@ -6,6 +6,7 @@ import { PokemonImage } from "@components/pokemonImage";
 import { PokemonDescription } from "./components/pokemonDescription";
 import { PokemonReviews } from "./components/pokemonReviews";
 import { SwitchPokemon } from "./components/pokemonSwitch";
+import { ROUTES } from "@constants/routes";
 
 // The detail page of a pokemon
 export function DetailPage(){
@@ -14,10 +15,11 @@ export function DetailPage(){
     const [pokemon, setPokemon] = useState(null)
     const [reviews, setReviews] = useState([])
     const stats = useMemo(() => pokemon?.base, [pokemon])
+    const navigate = useNavigate()
 
     useEffect(() => {
         if(pokemonID){
-            LoadData.loadPokemon(setPokemon, pokemonID)
+            LoadData.loadPokemon(setPokemon, pokemonID, () => navigate(ROUTES.NOTFOUND))
             LoadData.loadPokemonReview(setReviews, pokemonID)
         }
     }, [pokemonID])
