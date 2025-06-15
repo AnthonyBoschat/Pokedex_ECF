@@ -9,7 +9,7 @@ export function PokemonStat({stat}){
     const statValue     = stat[1]
     const maxStatValue  = MAX_STAT[stringNormalize(statName)]
 
-    const percentageOfStat = (statValue * 100) / maxStatValue
+    const percentageOfStat = ((statValue * 100) / maxStatValue) > 100 ? 100 : (statValue * 100) / maxStatValue
     const hue = 240 - (120 * (percentageOfStat / 100));
 
     return(
