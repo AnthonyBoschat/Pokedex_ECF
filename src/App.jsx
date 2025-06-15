@@ -6,6 +6,7 @@ import { AppLayout } from '@layouts/app'
 import { HomePage } from '@pages/home'
 import { DetailPage } from '@pages/detail'
 import { ToastContainer } from 'react-toastify'
+import { NotFound } from '@pages/404'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
             <Route path={ROUTES.ROOT} element={<AppLayout/>}>
               <Route path={ROUTES.HOME} element={<HomePage/>}/>
               <Route path={ROUTES.DETAIL} element={<DetailPage/>}/>
+              <Route path='*' element={<NotFound/>}/>
             </Route>
 
           </Routes>
